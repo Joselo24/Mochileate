@@ -74,13 +74,13 @@ public class ClsControllerServicio_A {
         private String requerimeinto;
         private String propuesta;
         private String estado;
-
+        private String habilidad;
         private int bandera;
         private String[] array_CodHospedada;
         private String[] array_cod_x_Hospedar;
 
         ClsControllerServicio_A(){    }
-    ClsControllerServicio_A(List params, boolean key){
+        ClsControllerServicio_A(List params, boolean key){
 
 
         try {
@@ -109,6 +109,7 @@ public class ClsControllerServicio_A {
                     this.propuesta = jobPerfilColumna.getString(TAG_propuesta_anfit);
                     this.requerimeinto = jobPerfilColumna.getString(TAG_requerimiento_anfit);
                     this.estado= jobPerfilColumna.getString(TAG_estado);
+                    this.habilidad = jobPerfilColumna.getString(TAG_habibidad_viaj);
 
 
                     //Para la foto
@@ -254,7 +255,38 @@ public class ClsControllerServicio_A {
         }
     }
 
+    public int insertarViaje(List params){
+        try {
+            String url="http://www.studioqatro.com/mochileando/InsertViaje.php";
 
+            JSONObject jsonPerfilCliente = oConexion.makeHttpRequest2(url, "POST", params);
+            Log.d("perfil se actualizo correctamente ", jsonPerfilCliente.toString());
+            int success = jsonPerfilCliente.getInt(TAG_SUCCESS_COLUMNA);
+
+            return success;
+        } catch (JSONException e) {
+            e.printStackTrace();
+            return 0;
+        }
+
+
+    }
+    public int actualizarViaje(List params){
+        try {
+            String url="http://www.studioqatro.com/mochileando/ActualizarViaje.php";
+
+            JSONObject jsonPerfilCliente = oConexion.makeHttpRequest2(url, "POST", params);
+            Log.d("perfil se actualizo correctamente ", jsonPerfilCliente.toString());
+            int success = jsonPerfilCliente.getInt(TAG_SUCCESS_COLUMNA);
+
+            return success;
+        } catch (JSONException e) {
+            e.printStackTrace();
+            return 0;
+        }
+
+
+    }
     public int setSubirFoto(File file, String url, String nombrePosicion, String nombreFile)  {
         int success = oConexion.uploadFoto(file, url, nombrePosicion, nombreFile);
         return success;
@@ -329,5 +361,9 @@ public class ClsControllerServicio_A {
 
     public String getEstado() {
         return estado;
+    }
+
+    public String getHabilidad() {
+        return habilidad;
     }
 }

@@ -177,12 +177,14 @@ public class frmServicioAnfitrion extends ActionBarActivity {
         lst_x_Hospedar.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                if (array_Cod_x_Hospedar[position].isEmpty()) {
-                    Log.d("codigo tecnico citas", "vacio viaje - - - ");
-                } else {
-                    Log.d("codigo tecnico citas", array_Cod_x_Hospedar[position]);
+                if (array_Cod_x_Hospedar[position].length()>0) {
+                    Intent i = new Intent(frmServicioAnfitrion.this, frmConfSolAnfitrion.class);
+                    i.putExtra("codigo", codigo);
+                    i.putExtra("codigoViaje", array_Cod_x_Hospedar[position]);
+                    i.putExtra("detonante", "detonante");
+                    startActivity(i);
                 }
+
 
             }
         });

@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -45,6 +46,7 @@ public class frmSolicitarViaje_1 extends ActionBarActivity {
     private ProgressDialog pDialog;
     private ListView lstDisponibles;
     private Spinner spnCiudad;
+    private Button btnBuscar;
 
 
     private int bandera;
@@ -84,8 +86,8 @@ public class frmSolicitarViaje_1 extends ActionBarActivity {
         }
 
         //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-        loading=(RelativeLayout)findViewById(R.id.opcionesLayout);
-
+        loading=(RelativeLayout)findViewById(R.id.lyoSol1);
+        btnBuscar=(Button)findViewById(R.id.btnBuscarPosada);
         //Adaptar elementos
 
         lstDisponibles =(ListView)findViewById(R.id.lstDisponibles);
@@ -93,20 +95,34 @@ public class frmSolicitarViaje_1 extends ActionBarActivity {
         adapterCiudades = new ArrayList<String>();
         adapterCiudades.add("Guayas");
         adapterCiudades.add("Cuenca");
+        adapterCiudades.add("Manabi");
 
         ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, adapterCiudades);
         adaptador.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spnCiudad.setAdapter(adaptador);
-        array_CodDisponible =new String[25];
-        spnCiudad.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        //array_CodDisponible =new String[25];
+        btnBuscar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ciudadaKey=spnCiudad.getSelectedItem().toString();
+
+
+                        new cargarInfo().execute();
+
+
+            }
+        });
+
+        /*spnCiudad.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ciudadaKey=spnCiudad.getSelectedItem().toString();
                 if(ciudadaKey !="Escoja una Ciudad") {
+
                     new cargarInfo().execute();
                 }
             }
-        });
+        });*/
 
 
 
@@ -160,7 +176,7 @@ public class frmSolicitarViaje_1 extends ActionBarActivity {
 
         protected String doInBackground(String... args) {
 
-
+            array_CodDisponible =new String[50];
             hasDisponible = new ArrayList<HashMap<String, String>>();
 
             String _codigo = Integer.toString(codigo);

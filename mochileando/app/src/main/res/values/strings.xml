@@ -13,4 +13,5 @@
     <string name="title_activity_frm_tipo_sesion">frmTipoSesion</string>
     <string name="title_activity_frm_solicitar_viaje_1">frmSolicitarViaje_1</string>
     <string name="title_activity_frm_solicitar_viaje_2">frmSolicitarViaje_2</string>
+    <string name="title_activity_frm_conf_sol_anfitrion">frmConfSolAnfitrion</string>
 </resources>

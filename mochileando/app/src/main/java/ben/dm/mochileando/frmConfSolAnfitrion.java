@@ -31,16 +31,15 @@ import java.util.Calendar;
 import java.util.List;
 
 
-public class frmSolicitarViaje_2 extends ActionBarActivity {
-
+public class frmConfSolAnfitrion extends ActionBarActivity {
 
 
     private int codigo=0;
-    private String codAnfitrion;
+    private String codigoViaje;
     private RelativeLayout loading;
-    private TextView txtTelefono, txtCorreo,txtNombre, txtDireccion, txtProvincia,txtEstado, txtSexo, txtNacimiento, txtRequerimiento, txtPropuesta;
+    private TextView txtTelefono, txtCorreo,txtNombre, txtDireccion, txtProvincia, txtSexo, txtNacimiento, txtHabilidad;
     private ImageView imgFoto;
-    private Button btnsolicitar, btnLLamar, btnAddViaje;
+    private Button btnConfirmar, btnLLamar, btnRechazar;
     private ProgressDialog pDialog;
 
 
@@ -56,22 +55,21 @@ public class frmSolicitarViaje_2 extends ActionBarActivity {
     private String correo;
     private String provincia;
     private String sexo;
-    private String requerimeinto;
-    private String propuesta;
-    private String estado;
+    private String habilidad;
+
 
 
     private Bitmap loadedImage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_frm_solicitar_viaje_2);
+        setContentView(R.layout.activity_frm_conf_sol_anfitrion);
         //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
         String detonate=getIntent().getStringExtra("detonante");
         if(detonate==null){
             Log.d("Tag", "La actividad no se ha llamado mediante un intent.");
 
-            clsConexionLocal oConexionLocal2 = new clsConexionLocal(frmSolicitarViaje_2.this, "administracion", null, 1);
+            clsConexionLocal oConexionLocal2 = new clsConexionLocal(frmConfSolAnfitrion.this, "administracion", null, 1);
             SQLiteDatabase bd2 = oConexionLocal2.getWritableDatabase();
             Cursor fila = bd2.rawQuery("select codigo  from cliente", null); //devuelve 0 o 1 fila //es una consulta
             if (fila.moveToFirst()) {  //si ha devuelto 1 fila, vamos al primero (que es el unico)
@@ -85,34 +83,34 @@ public class frmSolicitarViaje_2 extends ActionBarActivity {
         }else {
             Bundle datos = getIntent().getExtras();
             this.codigo= datos.getInt("codigo");
-            this.codAnfitrion=datos.getString("codigoAnfitrion");
+            this.codigoViaje =datos.getString("codigoViaje");
             Log.d("zzz", String.valueOf(codigo));
 
         }
 
         //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-        loading=(RelativeLayout)findViewById(R.id.lyoSolV2);
+        loading=(RelativeLayout)findViewById(R.id.lyo_C);
 
         //Adaptar elementos
-        txtNombre = (TextView)findViewById(R.id.txtNombresSol_2);
-        txtProvincia =(TextView)findViewById(R.id.txtProvinciaSol_2);
-        txtDireccion =(TextView)findViewById(R.id.txtDireccionSol_2);
+        txtNombre = (TextView)findViewById(R.id.txtNombres_C);
+        txtProvincia =(TextView)findViewById(R.id.txtProvincia_C);
+        txtDireccion =(TextView)findViewById(R.id.txtDireccion_C);
 
-        txtCorreo = (TextView)findViewById(R.id.txtCorreoSol_2);
-        txtTelefono =(TextView)findViewById(R.id.txtCelularSol_2);
-        txtEstado =(TextView)findViewById(R.id.txtEstadoSol_2);
-
-        txtNacimiento=(TextView)findViewById(R.id.txtNacimientoSol_2);
-        txtSexo=(TextView)findViewById(R.id.txtSexoSol_2);
-        txtRequerimiento =(TextView)findViewById(R.id.txtRequerimeintoSol_2);
-        txtPropuesta =(TextView)findViewById(R.id.txtPropuestaSol_2);
+        txtCorreo = (TextView)findViewById(R.id.txtCorreo_C);
+        txtTelefono =(TextView)findViewById(R.id.txtCelular_C);
 
 
+        txtNacimiento=(TextView)findViewById(R.id.txtNacimiento_C);
+        txtSexo=(TextView)findViewById(R.id.txtSexo_C);
+        txtHabilidad =(TextView)findViewById(R.id.txtHabilidades_C);
 
-        imgFoto=(ImageView)findViewById(R.id.imgFotoSol_2);
 
-        btnsolicitar =(Button)findViewById(R.id.btnEditarSol_2);
-        btnLLamar =(Button)findViewById(R.id.btnLlamarSol_2);
+
+
+        imgFoto=(ImageView)findViewById(R.id.imgFoto_C);
+        btnRechazar =(Button)findViewById(R.id.btnRechazar_C);
+        btnConfirmar =(Button)findViewById(R.id.btnConfirmar_C);
+        btnLLamar =(Button)findViewById(R.id.btnLlamar_C);
 
 
 
@@ -130,7 +128,7 @@ public class frmSolicitarViaje_2 extends ActionBarActivity {
             }
         });
 
-        btnsolicitar.setOnClickListener(new View.OnClickListener() {
+        btnConfirmar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 new AsyncTask<Void, Void, String>() {
@@ -138,14 +136,12 @@ public class frmSolicitarViaje_2 extends ActionBarActivity {
                     protected String doInBackground(Void... params) {
                         String _codigo = Integer.toString(codigo);
                         List params2 = new ArrayList();
-                        params2.add(new BasicNameValuePair("codigoV",_codigo));
-                        params2.add(new BasicNameValuePair("codigoA",codAnfitrion));
-                        params2.add(new BasicNameValuePair("fecha",fechaHoraActual()));
-                        params2.add(new BasicNameValuePair("estado","Por Confirmar"));
+                        params2.add(new BasicNameValuePair("codigoV", codigoViaje));
+                        params2.add(new BasicNameValuePair("estadoV", "Confirmado"));
 
-                        try{
+                        try {
                             oPerfil = new ClsControllerServicio_A();
-                            int respuesta =  oPerfil.insertarViaje(params2);
+                            int respuesta = oPerfil.actualizarViaje(params2);
                             return Integer.toString(respuesta);
 
 
@@ -162,22 +158,82 @@ public class frmSolicitarViaje_2 extends ActionBarActivity {
                     protected void onPostExecute(final String respuesta) {
                         runOnUiThread(new Runnable() {
                             public void run() {
-                                String res=respuesta;
-                                switch (res){
+                                String res = respuesta;
+                                switch (res) {
                                     case "0":
                                         //  alertaConfirmacion("Importante", "No hay datos para presentar.");
                                         break;
 
                                     case "1":
-                                        Toast.makeText(getApplicationContext(), "La cita se anulo con exito." , Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getApplicationContext(), "La cita se anulo con exito.", Toast.LENGTH_SHORT).show();
                                         finish();
                                         break;
                                     case "2":
-                                        Toast.makeText(getApplicationContext(), "Importante: No se puede conectar." , Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getApplicationContext(), "Importante: No se puede conectar.", Toast.LENGTH_SHORT).show();
 
                                         break;
                                     case "3":
-                                        Toast.makeText(getApplicationContext(), "Importante: Estamos en mantenimiento." , Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getApplicationContext(), "Importante: Estamos en mantenimiento.", Toast.LENGTH_SHORT).show();
+
+                                        break;
+                                }
+
+                            }
+                        });
+
+
+                    }
+                }.execute(null, null, null);
+
+            }
+        });
+
+        btnRechazar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new AsyncTask<Void, Void, String>() {
+                    @Override
+                    protected String doInBackground(Void... params) {
+                        String _codigo = Integer.toString(codigo);
+                        List params2 = new ArrayList();
+                        params2.add(new BasicNameValuePair("codigoV", codigoViaje));
+                        params2.add(new BasicNameValuePair("estadoV", "Rechazada"));
+
+                        try {
+                            oPerfil = new ClsControllerServicio_A();
+                            int respuesta = oPerfil.actualizarViaje(params2);
+                            return Integer.toString(respuesta);
+
+
+                        } catch (Exception ex) {
+
+                            Log.d("No Exito ", ex.toString());
+
+                        }
+
+                        return "0";
+                    }
+
+                    @Override
+                    protected void onPostExecute(final String respuesta) {
+                        runOnUiThread(new Runnable() {
+                            public void run() {
+                                String res = respuesta;
+                                switch (res) {
+                                    case "0":
+                                        //  alertaConfirmacion("Importante", "No hay datos para presentar.");
+                                        break;
+
+                                    case "1":
+                                        Toast.makeText(getApplicationContext(), "La cita se anulo con exito.", Toast.LENGTH_SHORT).show();
+                                        finish();
+                                        break;
+                                    case "2":
+                                        Toast.makeText(getApplicationContext(), "Importante: No se puede conectar.", Toast.LENGTH_SHORT).show();
+
+                                        break;
+                                    case "3":
+                                        Toast.makeText(getApplicationContext(), "Importante: Estamos en mantenimiento.", Toast.LENGTH_SHORT).show();
 
                                         break;
                                 }
@@ -235,7 +291,7 @@ public class frmSolicitarViaje_2 extends ActionBarActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            pDialog = new ProgressDialog(frmSolicitarViaje_2.this);
+            pDialog = new ProgressDialog(frmConfSolAnfitrion.this);
             setLoanding(true);
             pDialog.show();
         }
@@ -246,7 +302,7 @@ public class frmSolicitarViaje_2 extends ActionBarActivity {
 
             String _codigo = Integer.toString(codigo);
             List params = new ArrayList();
-            params.add(new BasicNameValuePair("codigo",codAnfitrion));
+            params.add(new BasicNameValuePair("codigo", codigoViaje));
             //-----------------------------------------------------------------
             try {
                 oPerfil = new ClsControllerServicio_A(params,true);
@@ -261,9 +317,8 @@ public class frmSolicitarViaje_2 extends ActionBarActivity {
                 nacimiento = oPerfil.getNacimiento();
                 provincia = oPerfil.getProvincia();
                 sexo = oPerfil.getSexo();
-                requerimeinto = oPerfil.getRequerimeinto();
-                propuesta= oPerfil.getPropuesta();
-                estado= oPerfil.getEstado();
+                habilidad = oPerfil.getHabilidad();
+
 
                 loadedImage = oPerfil.getImage();
 
@@ -303,9 +358,7 @@ public class frmSolicitarViaje_2 extends ActionBarActivity {
                             txtDireccion.setText(direccion);
                             txtNacimiento.setText(nacimiento);
                             txtSexo.setText(sexo);
-                            txtRequerimiento.setText(requerimeinto);
-                            txtPropuesta.setText(propuesta);
-                            txtEstado.setText(estado);
+                            txtHabilidad.setText(habilidad);
 
                             if(loadedImage!=null) {
                                 imgFoto.setImageBitmap(loadedImage);
@@ -354,10 +407,12 @@ public class frmSolicitarViaje_2 extends ActionBarActivity {
     // Hilos Fin
     //==============================================================================================
 
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_frm_solicitar_viaje_2, menu);
+        getMenuInflater().inflate(R.menu.menu_frm_conf_sol_anfitrion, menu);
         return true;
     }
 
