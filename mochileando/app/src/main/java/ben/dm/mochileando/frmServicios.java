@@ -11,6 +11,7 @@ import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -156,6 +157,35 @@ public class frmServicios extends ActionBarActivity {
         cod_x_Viajar =new String[25];
 
         new cargarInfo().execute();
+
+        btnFoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(frmServicios.this, frmPerfilFoto.class);
+                i.putExtra("codigo", codigo);
+                i.putExtra("detonante", "detonante");
+                startActivity(i);
+            }
+        });
+
+        btnEditar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(frmServicios.this, frmEditarPerfil.class);
+                i.putExtra("codigo", codigo);
+                i.putExtra("detonante", "detonante");
+                i.putExtra("nombres", txtNombre.getText().toString());
+                i.putExtra("direccion", txtDireccion.getText().toString());
+                i.putExtra("telefono", txtTelefono.getText().toString());
+                i.putExtra("nacimiento", txtNacimiento.getText().toString());
+                i.putExtra("correo", txtCorreo.getText().toString());
+                i.putExtra("provincia", txtProvincia.getText().toString());
+                i.putExtra("sexo", txtSexo.getText().toString());
+                i.putExtra("habilidad", txthabilidad.getText().toString());
+                startActivity(i);
+            }
+        });
+
 
         btnAddViaje.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -360,6 +390,7 @@ public class frmServicios extends ActionBarActivity {
 
         }
     }
+
     public void alertaConfirmacion(String titulo, String mensaje){
         AlertDialog.Builder oAlerta = new AlertDialog.Builder(this);
         oAlerta.setTitle(titulo);
@@ -381,6 +412,30 @@ public class frmServicios extends ActionBarActivity {
         });
         oAlerta.show();
     }
+
+    private void getActualizar(String key, String detalle){
+
+        AlertDialog.Builder oAlerta = new AlertDialog.Builder(this);
+        oAlerta.setTitle(detalle);//oAlerta.setMessage(mensaje);
+        final View view = frmServicios.this.getLayoutInflater().inflate(R.layout.editar_cajas, null);
+        oAlerta.setView(view);
+        oAlerta.setCancelable(false);
+        oAlerta.setPositiveButton("Actualizar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                TextView txtv = (TextView) view.findViewById(R.id.caja_1);
+               // dialog.cancel();
+            }
+        });
+        oAlerta.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+
+            }
+        });
+        oAlerta.show();
+    }
     //==============================================================================================
     // Hilos Fin
     //==============================================================================================
@@ -391,8 +446,6 @@ public class frmServicios extends ActionBarActivity {
         getMenuInflater().inflate(R.menu.menu_frm_servicios, menu);
         return true;
     }
-
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

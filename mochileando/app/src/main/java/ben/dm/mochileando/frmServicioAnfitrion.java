@@ -160,6 +160,36 @@ public class frmServicioAnfitrion extends ActionBarActivity {
 
         new cargarInfo().execute();
 
+        btnFoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(frmServicioAnfitrion.this, frmPerfilFotoAnfitrion.class);
+                i.putExtra("codigo", codigo);
+                i.putExtra("detonante", "detonante");
+                startActivity(i);
+            }
+        });
+
+        btnEditar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(frmServicioAnfitrion.this, frmEditarPerfilAnfitrion.class);
+                i.putExtra("codigo", codigo);
+                i.putExtra("detonante", "detonante");
+                i.putExtra("nombres", txtNombre.getText().toString());
+                i.putExtra("direccion", txtDireccion.getText().toString());
+                i.putExtra("telefono", txtTelefono.getText().toString());
+                i.putExtra("nacimiento", txtNacimiento.getText().toString());
+                i.putExtra("correo", txtCorreo.getText().toString());
+                i.putExtra("provincia", txtProvincia.getText().toString());
+                i.putExtra("sexo", txtSexo.getText().toString());
+                i.putExtra("requerimiento", txtRequerimiento.getText().toString());
+                i.putExtra("propuesta", txtPropuesta.getText().toString());
+                i.putExtra("estado", txtEstado.getText().toString());
+                startActivity(i);
+            }
+        });
+
         lstHospedajes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override

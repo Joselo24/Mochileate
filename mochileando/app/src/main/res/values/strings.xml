@@ -14,4 +14,8 @@
     <string name="title_activity_frm_solicitar_viaje_1">frmSolicitarViaje_1</string>
     <string name="title_activity_frm_solicitar_viaje_2">frmSolicitarViaje_2</string>
     <string name="title_activity_frm_conf_sol_anfitrion">frmConfSolAnfitrion</string>
+    <string name="title_activity_frm_perfil_foto">frmPerfilFoto</string>
+    <string name="title_activity_frm_editar_perfil">frmEditarPerfil</string>
+    <string name="title_activity_frm_editar_perfil_anfitrion">frmEditarPerfilAnfitrion</string>
+    <string name="title_activity_frm_perfil_foto_anfitrion">frmPerfilFotoAnfitrion</string>
 </resources>

@@ -8,10 +8,8 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,7 +18,7 @@ import java.util.ArrayList;
 
 public class frmIniciarSesion extends FragmentActivity {
 
-    private clsCliente oInicio;
+    private ClsControllerUser oInicio;
     private EditText usuario, contraseña;
     private Button iniciarSesion;
     private TextView btnRegistrate;
@@ -90,7 +88,7 @@ public class frmIniciarSesion extends FragmentActivity {
                 @Override
                 protected String doInBackground(String... args) {
 
-                    oInicio = new clsCliente();
+                    oInicio = new ClsControllerUser();
                     resultado = oInicio.iniciar(usuario_, contraseña_);//bandera contendra el codigo
                     bandera = Integer.parseInt(resultado[0]);
 

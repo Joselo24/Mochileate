@@ -53,22 +53,6 @@
             android:label="@string/title_activity_frm_registrate" >
         </activity>
         <activity
-            android:name=".SolicitarPosada"
-            android:label="@string/title_activity_solicitar_posada" >
-        </activity>
-        <activity
-            android:name=".DetallesPosada"
-            android:label="@string/title_activity_detalles_posada" >
-        </activity>
-        <activity
-            android:name=".frmServicioAnfitrion"
-            android:label="@string/title_activity_frm_servicio_anfitrion" >
-        </activity>
-        <activity
-            android:name=".Adapter_Viajes_Act"
-            android:label="@string/title_activity_adapter__viajes_" >
-        </activity>
-        <activity
             android:name=".frmTipoSesion"
             android:label="@string/title_activity_frm_tipo_sesion" >
         </activity>
@@ -83,6 +67,22 @@
         <activity
             android:name=".frmConfSolAnfitrion"
             android:label="@string/title_activity_frm_conf_sol_anfitrion" >
+        </activity>
+        <activity
+            android:name=".frmPerfilFoto"
+            android:label="@string/title_activity_frm_perfil_foto" >
+        </activity>
+        <activity
+            android:name=".frmEditarPerfil"
+            android:label="@string/title_activity_frm_editar_perfil" >
+        </activity>
+        <activity
+            android:name=".frmEditarPerfilAnfitrion"
+            android:label="@string/title_activity_frm_editar_perfil_anfitrion" >
+        </activity>
+        <activity
+            android:name=".frmPerfilFotoAnfitrion"
+            android:label="@string/title_activity_frm_perfil_foto_anfitrion" >
         </activity>
     </application>
 

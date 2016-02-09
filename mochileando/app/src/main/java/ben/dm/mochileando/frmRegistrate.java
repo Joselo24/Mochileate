@@ -34,7 +34,7 @@ public class frmRegistrate extends ActionBarActivity {
     private RelativeLayout loading;
     private ProgressDialog pDialog;
     private String[] resultado= new String[2];
-    private clsCliente oCliente;
+    private ClsControllerUser oCliente;
     private String data;
     private int bandera=0;
 
@@ -187,7 +187,7 @@ public class frmRegistrate extends ActionBarActivity {
                     Log.d("Respuesta del envio del codigo para el registro registro = ", correo);
                     Log.d("Respuesta del envio del codigo para el registro registro = ", direccion);
                     Log.d("Respuesta del envio del codigo para el registro registro = ", provincia);
-                    oCliente = new clsCliente();
+                    oCliente = new ClsControllerUser();
                     resultado=oCliente.setIngresarPerfil(params);
                     bandera = Integer.parseInt(resultado[0]);
                     if (bandera != 0) {

@@ -12,13 +12,13 @@ import java.util.List;
 /**
  * Created by Benito on 11/09/2015.
  */
-public class clsCliente {
+public class ClsControllerUser {
 
     private static final String SUCCESS = "success";
     private static final String CODIGO = "codigo";
     private static final String MESSAGE = "message";
     clsConexionRemota oConexion = new clsConexionRemota();
-    clsCliente(){
+    ClsControllerUser(){
 
     }
     public String[] setIngresarPerfil(List params){
@@ -126,7 +126,32 @@ public class clsCliente {
         return resultado;
     }
 
+    public int actualizarPrfil(List params, boolean key){
+        try {
+            if(key== true){
+                String url="http://www.studioqatro.com/mochileando/ActualizarPerfil.php";
+                JSONObject jsonPerfilCliente = oConexion.makeHttpRequest2(url, "POST", params);
+                Log.d("perfil se actualizo correctamente ", jsonPerfilCliente.toString());
+                int success = jsonPerfilCliente.getInt(SUCCESS);
 
+                return success;
+            }else{
+                String url="http://www.studioqatro.com/mochileando/ActualizarPerfilAnfitrion.php";
+                JSONObject jsonPerfilCliente = oConexion.makeHttpRequest2(url, "POST", params);
+                Log.d("perfil se actualizo correctamente ", jsonPerfilCliente.toString());
+                int success = jsonPerfilCliente.getInt(SUCCESS);
+
+                return success;
+            }
+
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+            return 0;
+        }
+
+
+    }
 
 
 }
