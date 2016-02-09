@@ -30,8 +30,6 @@ public class frmIniciarSesion extends FragmentActivity {
     private String[] resultado= new String[2];
     private String usuario_ = "";
     private String contraseña_="";
-    private String key="";
-    private ArrayList listtipoSesion;
 
 
 
@@ -40,18 +38,10 @@ public class frmIniciarSesion extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_frm_iniciar_sesion);
 
-
-
         usuario= (EditText) findViewById(R.id.txtUsuario);
         contraseña = (EditText) findViewById(R.id.txtContraseña);
         iniciarSesion = (Button) findViewById(R.id.btnInicio);
         btnRegistrate=(TextView)findViewById(R.id.txtRegistrate);
-        /*listtipoSesion = new ArrayList<String>();
-        listtipoSesion.add("Viajero");
-        listtipoSesion.add("Anfitrión");
-        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listtipoSesion);
-        adaptador.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spnTipoSesion.setAdapter(adaptador);*/
 
         iniciarSesion.setOnClickListener(new View.OnClickListener() {//Para iniciar sesion
             @Override
@@ -74,7 +64,7 @@ public class frmIniciarSesion extends FragmentActivity {
                 Intent i = new Intent(frmIniciarSesion.this, frmRegistrate.class);
                 i.putExtra("detonante", "detonante");
                 startActivity(i);
-                finish();
+                //finish();
 
             }
         });

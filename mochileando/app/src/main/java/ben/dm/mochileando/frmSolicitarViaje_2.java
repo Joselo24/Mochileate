@@ -169,7 +169,7 @@ public class frmSolicitarViaje_2 extends ActionBarActivity {
                                         break;
 
                                     case "1":
-                                        Toast.makeText(getApplicationContext(), "La cita se anulo con exito." , Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getApplicationContext(), "La solicitud fue enviada con exito." , Toast.LENGTH_SHORT).show();
                                         finish();
                                         break;
                                     case "2":

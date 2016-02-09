@@ -185,12 +185,13 @@ public class frmEditarPerfil extends ActionBarActivity {
                         Log.d("perfil ",telefono.toString());
                         //-----------------------------------------------------------------
                         try{
-                            if(correo!="" || telefono!="" || nombres !="" || direccion !="" || nacimiento!="" || provincia!="" || sexo!="" || habilidad!="") {
+                            if(correo.equals("") || telefono.equals("") || nombres.equals("") || direccion.equals("") || nacimiento.equals("") || provincia.equals("") || sexo.equals("") || habilidad.equals("")) {
+                                return "0";
+                            }else {
+
                                 oPerfil = new ClsControllerUser();
                                 int respuesta = oPerfil.actualizarPrfil(params2, true);
                                 return Integer.toString(respuesta);
-                            }else {
-                                return "0";
                             }
 
                         } catch (Exception ex) {
@@ -212,7 +213,7 @@ public class frmEditarPerfil extends ActionBarActivity {
                                 switch (res){
                                     case "0":
                                         Toast.makeText(getApplicationContext(), "Faltan datos por llenar, por favor verifique", Toast.LENGTH_SHORT).show();
-                                        finish();
+
 
                                         break;
 

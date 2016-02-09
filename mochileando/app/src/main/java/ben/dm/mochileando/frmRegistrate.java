@@ -206,11 +206,13 @@ public class frmRegistrate extends ActionBarActivity {
                             if(data!="0"){
                                 alertaConfirmacion("Importante", data);
                             }else {
-                                Toast.makeText(getApplicationContext(),"Registro exitoso",Toast.LENGTH_SHORT).show();
+                               /*
                                 Intent i = new Intent(frmRegistrate.this, MainActivity.class);
                                 i.putExtra("codigo", bandera);
                                 i.putExtra("detonante", "detonante");
                                 startActivity(i);
+                                */
+                                Toast.makeText(getApplicationContext(),"Registro exitoso",Toast.LENGTH_SHORT).show();
                                 finish();
 
                             }

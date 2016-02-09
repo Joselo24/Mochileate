@@ -48,7 +48,7 @@ public class frmTipoSesion extends Activity {
                     i.putExtra("codigo", codigo);
                     i.putExtra("detonante", "detonante");
                     startActivity(i);
-                finish();
+                    finish();
             }
         });
     }

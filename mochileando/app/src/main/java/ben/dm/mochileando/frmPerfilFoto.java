@@ -38,20 +38,13 @@ public class frmPerfilFoto extends ActionBarActivity {
     private String codigoString;
     int bandera=0;
 
-    @Override//Para que el botan atras funcione
-    public boolean onOptionsItemSelected(MenuItem item){
-        System.exit(0);
-        Intent myIntent = new Intent(getApplicationContext(), frmServicios.class);
-        startActivityForResult(myIntent, 0);
-        return true;
 
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_frm_perfil_foto);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         Bundle datos = getIntent().getExtras();
         this.codigo = datos.getInt("codigo");

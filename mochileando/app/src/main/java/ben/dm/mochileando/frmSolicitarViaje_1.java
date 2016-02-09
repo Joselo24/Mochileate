@@ -96,38 +96,32 @@ public class frmSolicitarViaje_1 extends ActionBarActivity {
         adapterCiudades.add("Guayas");
         adapterCiudades.add("Cuenca");
         adapterCiudades.add("Manabi");
+        adapterCiudades.add("Montañita");
+        adapterCiudades.add("Salinas");
+        adapterCiudades.add("Puerto Lopez");
+        adapterCiudades.add("Villamil");
+        adapterCiudades.add("Olon");
+        adapterCiudades.add("Ballenita");
+        adapterCiudades.add("Esmeraldas");
 
         ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, adapterCiudades);
         adaptador.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spnCiudad.setAdapter(adaptador);
         //array_CodDisponible =new String[25];
+        //===================================
+        ciudadaKey=spnCiudad.getSelectedItem().toString();
+        new cargarInfo().execute();
+
+
         btnBuscar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ciudadaKey=spnCiudad.getSelectedItem().toString();
-
-
-                        new cargarInfo().execute();
+                new cargarInfo().execute();
 
 
             }
         });
-
-        /*spnCiudad.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ciudadaKey=spnCiudad.getSelectedItem().toString();
-                if(ciudadaKey !="Escoja una Ciudad") {
-
-                    new cargarInfo().execute();
-                }
-            }
-        });*/
-
-
-
-
-
 
         lstDisponibles.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -276,25 +270,5 @@ public class frmSolicitarViaje_1 extends ActionBarActivity {
     // Hilos Fin
     //==============================================================================================
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_frm_solicitar_viaje_1, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

@@ -441,6 +441,16 @@ public class frmServicios extends ActionBarActivity {
     //==============================================================================================
 
     @Override
+    public void onRestart(){
+        super.onRestart();
+
+        Intent refresh = new Intent(this, frmServicios.class);
+        startActivity(refresh);
+        finish();
+
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_frm_servicios, menu);

@@ -201,12 +201,13 @@ btnActualizar.setOnClickListener(new View.OnClickListener() {
                 Log.d("perfil ", telefono.toString());
                 //-----------------------------------------------------------------
                 try {
-                    if (requerimiento != "" || correo != "" || telefono != "" || nombres != "" || direccion != "" || nacimiento != "" || provincia != "" || sexo != "" || propuesta != "") {
+                    if (requerimiento.equals("") || correo.equals("") || telefono.equals("") || nombres.equals("") || direccion.equals("") || nacimiento.equals("") || provincia.equals("") || sexo.equals("") || propuesta.equals("")) {
+                        return "0";
+                    } else {
+
                         oPerfil = new ClsControllerUser();
                         int respuesta = oPerfil.actualizarPrfil(params2, false);
                         return Integer.toString(respuesta);
-                    } else {
-                        return "0";
                     }
 
                 } catch (Exception ex) {
@@ -228,7 +229,7 @@ btnActualizar.setOnClickListener(new View.OnClickListener() {
                         switch (res) {
                             case "0":
                                 Toast.makeText(getApplicationContext(), "Faltan datos por llenar, por favor verifique", Toast.LENGTH_SHORT).show();
-                                finish();
+
 
                                 break;
 

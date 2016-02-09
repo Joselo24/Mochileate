@@ -52,14 +52,17 @@ public class MainActivity   extends Activity {
                 SQLiteDatabase bd2 = oConexionLocal2.getWritableDatabase();
                 Cursor fila = bd2.rawQuery("select codigo  from cliente", null); //devuelve 0 o 1 fila //es una consulta
                 if (fila.moveToFirst()) {  //si ha devuelto 1 fila, vamos al primero (que es el unico)
-                    finish();
                     Log.d("zzz", "Si entro main");
+                    finish();
+
                     Intent i = new Intent(MainActivity.this, frmTipoSesion.class);
                     int codigo = Integer.parseInt(fila.getString(0));
                     Log.d("zzz", String.valueOf(codigo));
                     i.putExtra("codigo", codigo);
                     i.putExtra("detonante", "detonante");
                     startActivity(i);
+
+
 
 
                 } else { //No existe ningun registro
