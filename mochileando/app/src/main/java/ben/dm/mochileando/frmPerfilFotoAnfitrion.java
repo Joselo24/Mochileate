@@ -15,7 +15,6 @@ import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -31,7 +30,7 @@ public class frmPerfilFotoAnfitrion extends ActionBarActivity {
     private int codigo;
     private ImageView imgFotoHecha;
     // private EditText nombreImagen;
-    private Button btnSubirFoto, btnTomarFoto;
+    private Button btnSubirFoto_AS, btnTomarFoto_AS;
 
     private Uri output;
     private String foto;
@@ -42,7 +41,7 @@ public class frmPerfilFotoAnfitrion extends ActionBarActivity {
     @Override//Para que el botan atras funcione
     public boolean onOptionsItemSelected(MenuItem item){
         System.exit(0);
-        Intent myIntent = new Intent(frmPerfilFotoAnfitrion.this, frmServicioAnfitrion.class);
+        Intent myIntent = new Intent(getApplicationContext(), frmServicioAnfitrion.class);
         startActivityForResult(myIntent, 0);
         return true;
 
@@ -50,7 +49,7 @@ public class frmPerfilFotoAnfitrion extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_frm_perfil_foto);
+        setContentView(R.layout.activity_frm_perfil_foto_anfitrion);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -58,24 +57,20 @@ public class frmPerfilFotoAnfitrion extends ActionBarActivity {
         this.codigo = datos.getInt("codigo");
         codigoString = Integer.toString(codigo)+"_foto";
 
-        btnSubirFoto = (Button) findViewById(R.id.btnSubirFoto_AF);
-        btnTomarFoto = (Button) findViewById(R.id.btnHacerFoto_AF);
+        btnSubirFoto_AS = (Button) findViewById(R.id.btnSubirFoto_AF);
+        btnTomarFoto_AS = (Button) findViewById(R.id.btnHacerFoto_AF);
         imgFotoHecha = (ImageView) findViewById(R.id.imgFotoHecha_AF);
 
-        btnTomarFoto.setOnClickListener(new View.OnClickListener() {
+
+
+        btnTomarFoto_AS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    getCamara();
-                }catch (Exception e){
-                    Log.e(" Error", "Error no se a tomado foto " + e.toString());
-                }
+                getCamara();
             }
         });
 
-
-
-        btnSubirFoto.setOnClickListener(new View.OnClickListener() {
+        btnSubirFoto_AS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -84,12 +79,12 @@ public class frmPerfilFotoAnfitrion extends ActionBarActivity {
                     if (file.exists()) {
                         new atkSubirFoto().execute();
                     } else {
-                        Toast toast1 = Toast.makeText(frmPerfilFotoAnfitrion.this, "Debes de tomar una foto", Toast.LENGTH_SHORT);
+                        Toast toast1 = Toast.makeText(getApplicationContext(), "Debes de tomar una foto", Toast.LENGTH_SHORT);
                         toast1.show();
                     }
                 } catch (Exception e) {
                     Log.e(" Error", "Error no se a tomado foto " + e.toString());
-                    Toast toast1 = Toast.makeText(frmPerfilFotoAnfitrion.this, "Debes de tomar una foto", Toast.LENGTH_SHORT);
+                    Toast toast1 = Toast.makeText(getApplicationContext(), "Debes de tomar una foto", Toast.LENGTH_SHORT);
                     toast1.show();
                 }
 
@@ -184,7 +179,7 @@ public class frmPerfilFotoAnfitrion extends ActionBarActivity {
                     switch (bandera){
                         case 1:
                             Log.d("foto","foto-------------");
-                            Toast.makeText(frmPerfilFotoAnfitrion.this,"La foto se guardo con exito",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(),"La foto se guardo con exito",Toast.LENGTH_SHORT).show();
                             finish();
 
                             break;

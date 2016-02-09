@@ -28,7 +28,7 @@ public class frmEditarPerfilAnfitrion extends ActionBarActivity {
     private RelativeLayout loading;
     private TextView txtTelefono, txtCorreo,txtNombre, txtDireccion,  txtNacimiento, txtPropuesta, txtRequeriminto;
     private Spinner spnSexo, spnCiudad, spnEstado;
-    private Button btnEditar;
+    private Button btnEditar_A, btnActualizar;
     private ProgressDialog pDialog;
     private ArrayList adapterCiudades, adapterSexo, adapterEstado;
 
@@ -129,9 +129,10 @@ public class frmEditarPerfilAnfitrion extends ActionBarActivity {
 
         ArrayAdapter<String> adaptador3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, adapterEstado);
         adaptador3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spnCiudad.setAdapter(adaptador3);
+        spnEstado.setAdapter(adaptador3);
 
-        btnEditar=(Button)findViewById(R.id.btnActualizarV);
+
+        btnActualizar =(Button)findViewById(R.id.btnActualizarV_Anf);
 
 
         txtNombre.setText(nombres);
@@ -142,125 +143,122 @@ public class frmEditarPerfilAnfitrion extends ActionBarActivity {
         txtPropuesta.setText(propuesta);
         txtRequeriminto.setText(requerimiento);
 
+btnActualizar.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        nombres = txtNombre.getText().toString();
+        direccion = txtDireccion.getText().toString();
+        telefono = txtTelefono.getText().toString();
+        nacimiento = txtNacimiento.getText().toString();
+        correo = txtCorreo.getText().toString();
+
+        propuesta = txtPropuesta.getText().toString();
+        String banderaCiudad = spnCiudad.getSelectedItem().toString();
+        String banderaSexo = spnSexo.getSelectedItem().toString();
+        String banderaEstado = spnEstado.getSelectedItem().toString();
+
+        if (banderaCiudad != "Seleccione...") {
+            provincia = spnCiudad.getSelectedItem().toString();
+        }
+        if (banderaSexo != "Seleccione...") {
+            sexo = spnSexo.getSelectedItem().toString();
+        }
+        if (banderaEstado != "Seleccione...") {
+            estado = spnEstado.getSelectedItem().toString();
+        }
+        //------------------------
 
 
-
-
-        btnEditar.setOnClickListener(new View.OnClickListener() {
+        new AsyncTask<Void, Void, String>() {
             @Override
-            public void onClick(View v) {
-                //------------------------
-
-                nombres= txtNombre.getText().toString();
-                direccion=txtDireccion.getText().toString();
-                telefono=txtTelefono.getText().toString();
-                nacimiento=txtNacimiento.getText().toString();
-                correo=txtCorreo.getText().toString();
-
+            protected String doInBackground(Void... params) {
+                nombres = txtNombre.getText().toString();
+                direccion = txtDireccion.getText().toString();
+                telefono = txtTelefono.getText().toString();
+                nacimiento = txtNacimiento.getText().toString();
+                correo = txtCorreo.getText().toString();
+                //provincia= spnCiudad.getSelectedItem().toString();
+                // sexo=spnSexo.getSelectedItem().toString();
                 propuesta = txtPropuesta.getText().toString();
-                String banderaCiudad=spnCiudad.getSelectedItem().toString();
-                String banderaSexo=spnSexo.getSelectedItem().toString();
-                String banderaEstado=spnEstado.getSelectedItem().toString();
+                requerimiento = txtRequeriminto.getText().toString();
 
-                if(banderaCiudad != "Seleccione...") {
-                    provincia = spnCiudad.getSelectedItem().toString();
-                }
-                if(banderaSexo != "Seleccione...") {
-                    sexo = spnSexo.getSelectedItem().toString();
-                }
-                if(banderaEstado != "Seleccione...") {
-                    estado = spnEstado.getSelectedItem().toString();
-                }
-                //------------------------
-
-
-                new AsyncTask<Void, Void, String>() {
-                    @Override
-                    protected String doInBackground(Void... params) {
-                        nombres= txtNombre.getText().toString();
-                        direccion=txtDireccion.getText().toString();
-                        telefono=txtTelefono.getText().toString();
-                        nacimiento=txtNacimiento.getText().toString();
-                        correo=txtCorreo.getText().toString();
-                        //provincia= spnCiudad.getSelectedItem().toString();
-                       // sexo=spnSexo.getSelectedItem().toString();
-                        propuesta = txtPropuesta.getText().toString();
-                        requerimiento= txtRequeriminto.getText().toString();
-
-                        String _codigo = Integer.toString(codigo);
-                        List params2 = new ArrayList();
-                        params2.add(new BasicNameValuePair("nombres",nombres));
-                        params2.add(new BasicNameValuePair("codigo",_codigo));
-                        params2.add(new BasicNameValuePair("telefono",telefono));
-                        params2.add(new BasicNameValuePair("direccion",direccion));
-                        params2.add(new BasicNameValuePair("nacimiento",nacimiento));
-                        params2.add(new BasicNameValuePair("correo",correo));
-                        params2.add(new BasicNameValuePair("provincia",provincia));
-                        params2.add(new BasicNameValuePair("sexo",sexo));
-                        params2.add(new BasicNameValuePair("propuesta", propuesta));
-                        params2.add(new BasicNameValuePair("requerimiento", requerimiento));
-                        params2.add(new BasicNameValuePair("estado", estado));
+                String _codigo = Integer.toString(codigo);
+                List params2 = new ArrayList();
+                params2.add(new BasicNameValuePair("nombres", nombres));
+                params2.add(new BasicNameValuePair("codigo", _codigo));
+                params2.add(new BasicNameValuePair("telefono", telefono));
+                params2.add(new BasicNameValuePair("direccion", direccion));
+                params2.add(new BasicNameValuePair("nacimiento", nacimiento));
+                params2.add(new BasicNameValuePair("correo", correo));
+                params2.add(new BasicNameValuePair("provincia", provincia));
+                params2.add(new BasicNameValuePair("sexo", sexo));
+                params2.add(new BasicNameValuePair("propuesta", propuesta));
+                params2.add(new BasicNameValuePair("requerimiento", requerimiento));
+                params2.add(new BasicNameValuePair("estado", estado));
 
 
-                        Log.d("perfil ",correo.toString());
-                        Log.d("perfil ",telefono.toString());
-                        //-----------------------------------------------------------------
-                        try{
-                            if(requerimiento!="" || correo!="" || telefono!="" || nombres !="" || direccion !="" || nacimiento!="" || provincia!="" || sexo!="" || propuesta !="") {
-                                oPerfil = new ClsControllerUser();
-                                int respuesta = oPerfil.actualizarPrfil(params2, false);
-                                return Integer.toString(respuesta);
-                            }else {
-                                return "0";
-                            }
-
-                        } catch (Exception ex) {
-
-                            Log.d("No Exito ", ex.toString());
-
-                        }
-
+                Log.d("perfil ", correo.toString());
+                Log.d("perfil ", telefono.toString());
+                //-----------------------------------------------------------------
+                try {
+                    if (requerimiento != "" || correo != "" || telefono != "" || nombres != "" || direccion != "" || nacimiento != "" || provincia != "" || sexo != "" || propuesta != "") {
+                        oPerfil = new ClsControllerUser();
+                        int respuesta = oPerfil.actualizarPrfil(params2, false);
+                        return Integer.toString(respuesta);
+                    } else {
                         return "0";
                     }
 
-                    @Override
-                    protected void onPostExecute(final String respuesta) {
-                        runOnUiThread(new Runnable() {
-                            public void run() {
+                } catch (Exception ex) {
 
-                                //  Integer res = Integer.
-                                String res=respuesta;
-                                switch (res){
-                                    case "0":
-                                        Toast.makeText(getApplicationContext(), "Faltan datos por llenar, por favor verifique", Toast.LENGTH_SHORT).show();
-                                        finish();
+                    Log.d("No Exito ", ex.toString());
 
-                                        break;
+                }
 
-                                    case "1":
-                                        Toast.makeText(getApplicationContext(), "Sus datos fueron actualizados con exito.", Toast.LENGTH_SHORT).show();
-                                        finish();
+                return "0";
+            }
+
+            @Override
+            protected void onPostExecute(final String respuesta) {
+                runOnUiThread(new Runnable() {
+                    public void run() {
+
+                        //  Integer res = Integer.
+                        String res = respuesta;
+                        switch (res) {
+                            case "0":
+                                Toast.makeText(getApplicationContext(), "Faltan datos por llenar, por favor verifique", Toast.LENGTH_SHORT).show();
+                                finish();
+
+                                break;
+
+                            case "1":
+                                Toast.makeText(getApplicationContext(), "Sus datos fueron actualizados con exito.", Toast.LENGTH_SHORT).show();
+                                finish();
 
 
-                                        break;
-                                    case "2":
-                                        Toast.makeText(getApplicationContext(), "No se puede conectar, por favor revise su conexión a internet." , Toast.LENGTH_SHORT).show();
+                                break;
+                            case "2":
+                                Toast.makeText(getApplicationContext(), "No se puede conectar, por favor revise su conexión a internet.", Toast.LENGTH_SHORT).show();
 
-                                        break;
-                                    case "3":
-                                        Toast.makeText(getApplicationContext(), "Sentimos los inconvenientes, estamos en mantenimiento." , Toast.LENGTH_SHORT).show();
+                                break;
+                            case "3":
+                                Toast.makeText(getApplicationContext(), "Sentimos los inconvenientes, estamos en mantenimiento.", Toast.LENGTH_SHORT).show();
 
-                                        break;
-                                }
-
-                            }
-                        });
-
+                                break;
+                        }
 
                     }
-                }.execute(null, null, null);
+                });
+
+
             }
-        });
+        }.execute(null, null, null);
+
+    }
+});
+
+
 
     }
 
@@ -268,7 +266,7 @@ public class frmEditarPerfilAnfitrion extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_frm_editar_perfil, menu);
+        getMenuInflater().inflate(R.menu.menu_frm_editar_perfil_anfitrion, menu);
         return true;
     }
 
