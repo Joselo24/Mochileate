@@ -29,7 +29,7 @@
                     android:id="@android:id/tabs"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:background="#ff1db79e"></TabWidget>
+                    style="#FF76DD4A"></TabWidget>
 
                 <FrameLayout
                     android:id="@android:id/tabcontent"
@@ -98,7 +98,7 @@
                                         android:layout_width = "100dp"
                                         android:layout_height = "wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:textColor="#ff2073ff"
+                                        android:textColor="#ff49d03c"
                                         android:text = "Fecha Nac"
                                         android:id="@+id/lbl_Pro"
                                         android:textSize="12dp" />
@@ -124,7 +124,7 @@
                                         android:layout_width = "100dp"
                                         android:layout_height = "wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:textColor="#ff2073ff"
+                                        android:textColor="#ff49d03c"
                                         android:text = "Sexo"
                                         android:id="@+id/lbl_Sexo"
                                         android:textSize="12dp" />
@@ -150,7 +150,7 @@
                                         android:layout_width = "100dp"
                                         android:layout_height = "wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:textColor="#ff2073ff"
+                                        android:textColor="#ff49d03c"
                                         android:text = "Teléfono:"
                                         android:id="@+id/lbl_telefono_usuario"
                                         android:textSize="12dp" />
@@ -176,7 +176,7 @@
                                         android:layout_width="100dp"
                                         android:layout_height="wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:textColor="#ff2073ff"
+                                        android:textColor="#ff49d03c"
                                         android:text="Correo:"
                                         android:id="@+id/textView20"
                                         android:textSize="12dp" />
@@ -201,7 +201,7 @@
                                         android:layout_width = "100dp"
                                         android:layout_height = "wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:textColor="#ff2073ff"
+                                        android:textColor="#ff49d03c"
                                         android:text = "Dirección: "
                                         android:id="@+id/lbl_direccion_usuario"
                                         android:textSize="12dp" />
@@ -227,7 +227,7 @@
                                         android:layout_width="100dp"
                                         android:layout_height="wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:textColor="#ff2073ff"
+                                        android:textColor="#ff49d03c"
                                         android:text="Provincia"
                                         android:id="@+id/textView5"
                                         android:textSize="12dp" />
@@ -252,7 +252,7 @@
                                         android:layout_width="100dp"
                                         android:layout_height="wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:textColor="#ff2073ff"
+                                        android:textColor="#ff49d03c"
                                         android:text="Estado"
                                         android:id="@+id/textView4"
                                         android:textSize="12dp" />
@@ -277,7 +277,7 @@
                                         android:layout_width="fill_parent"
                                         android:layout_height="wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:textColor="#ff2073ff"
+                                        android:textColor="#ff49d03c"
                                         android:text="Descripción de su propuesta"
                                         android:id="@+id/textView2"
                                         android:textSize="12dp" />
@@ -302,7 +302,7 @@
                                         android:layout_width="fill_parent"
                                         android:layout_height="wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
-                                        android:textColor="#ff2073ff"
+                                        android:textColor="#ff49d03c"
                                         android:text="Descripción de Requerimientos"
                                         android:id="@+id/txt1212"
                                         android:textSize="12dp" />
@@ -326,7 +326,7 @@
                                     android:layout_alignParentBottom="true"
                                     android:layout_alignParentRight="true"
                                     android:layout_alignParentEnd="true"
-                                    android:layout_marginTop="10dp">
+                                    android:layout_marginTop="5dp">
 
                                     <Button
                                         style="@style/Base.Theme.AppCompat.Light.DarkActionBar"
@@ -334,7 +334,7 @@
                                         android:layout_height="wrap_content"
                                         android:text="Editar Datos"
                                         android:id="@+id/btnEditar_A"
-                                        android:background="@drawable/botones_base"
+                                        android:background="@drawable/botones_base_verde"
                                         android:textColor="@drawable/botones_color_texto"
                                         android:textSize="16dp" />
 
@@ -344,7 +344,7 @@
                                         android:layout_height="wrap_content"
                                         android:text="Editar Foto"
                                         android:id="@+id/btnEditarFoto_A"
-                                        android:background="@drawable/botones_base"
+                                        android:background="@drawable/botones_base_verde"
                                         android:textColor="@drawable/botones_color_texto"
                                         android:textSize="16dp"
                                         android:layout_marginLeft="30dp" />

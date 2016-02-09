@@ -19,7 +19,7 @@
                 android:layout_width = "100dp"
                 android:layout_height = "wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="#ff2073ff"
+                android:textColor="#FF47C83C"
                 android:text = "Ciudad"
                 android:id="@+id/lbl_Pro"
                 android:textSize="12dp" />
@@ -46,7 +46,7 @@
                 android:layout_width = "100dp"
                 android:layout_height = "wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="#ff2073ff"
+                android:textColor="#FF47C83C"
                 android:text = "Fecha"
                 android:id="@+id/lbl_Fecha"
                 android:textSize="12dp" />
@@ -73,7 +73,7 @@
                 android:layout_width = "100dp"
                 android:layout_height = "wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="#ff2073ff"
+                android:textColor="#FF47C83C"
                 android:text = "Visitante"
                 android:id="@+id/lbl_Anfitrion"
                 android:textSize="12dp" />
@@ -100,7 +100,7 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="#ff2073ff"
+                android:textColor="#FF47C83C"
                 android:text="Dirección"
                 android:id="@+id/txtPrueba"
                 android:textSize="12dp" />
