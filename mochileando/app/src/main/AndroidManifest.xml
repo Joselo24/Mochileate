@@ -41,10 +41,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".frmIniciarSesion"
-            android:label="@string/title_activity_frm_iniciar_sesion" >
-        </activity>
-        <activity
             android:name=".frmServicios"
             android:label="@string/title_activity_frm_servicios" >
         </activity>
@@ -85,8 +81,12 @@
             android:label="@string/title_activity_frm_perfil_foto_anfitrion" >
         </activity>
         <activity
-          android:name=".frmServicioAnfitrion"
-          android:label="@string/title_activity_frm_servicio_anfitrion" >
+            android:name=".frmServicioAnfitrion"
+            android:label="@string/title_activity_frm_servicio_anfitrion" >
+        </activity>
+        <activity
+            android:name=".frmActivarSesion"
+            android:label="@string/title_activity_frm_activar_sesion" >
         </activity>
     </application>
 

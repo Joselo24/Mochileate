@@ -23,7 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/imagen_logo"
-                android:src="@drawable/easy"
+                android:src="@drawable/logo_v_200px"
                 android:layout_marginBottom="20dp"
                 android:layout_marginTop="20dp"/>
 
@@ -31,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="#ff2073ff"
+                android:textColor="#ff9c9c9c"
                 android:text="Puedes iniciar sesión como: "
                 android:id="@+id/textView3"
                 android:layout_gravity="center_horizontal"
@@ -67,7 +67,7 @@
                     android:layout_height="wrap_content"
                     android:text="Anfitrión"
                     android:id="@+id/btnInciarAnfitrion"
-                    android:background="@drawable/botones_base"
+                    android:background="@drawable/botones_base_verde"
                     android:textColor="@drawable/botones_color_texto"
                     android:textSize="16dp"
                     android:layout_marginLeft="30dp" />

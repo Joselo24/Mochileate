@@ -20,7 +20,8 @@
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+                android:baselineAligned="false">
 
                 <RelativeLayout
                     android:orientation="horizontal"
@@ -79,7 +80,7 @@
                         android:layout_width = "100dp"
                         android:layout_height = "wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="#ff2073ff"
+                        android:textColor="#FF47C83C"
                         android:text = "Fecha Nac"
                         android:id="@+id/lbl_Pro"
                         android:textSize="12dp" />
@@ -105,7 +106,7 @@
                         android:layout_width = "100dp"
                         android:layout_height = "wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="#ff2073ff"
+                        android:textColor="#FF47C83C"
                         android:text = "Sexo"
                         android:id="@+id/lbl_Sexo"
                         android:textSize="12dp" />
@@ -131,7 +132,7 @@
                         android:layout_width = "100dp"
                         android:layout_height = "wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="#ff2073ff"
+                        android:textColor="#FF47C83C"
                         android:text = "Teléfono:"
                         android:id="@+id/lbl_telefono_usuario"
                         android:textSize="12dp" />
@@ -157,7 +158,7 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="#ff2073ff"
+                        android:textColor="#FF47C83C"
                         android:text="Correo:"
                         android:id="@+id/textView20"
                         android:textSize="12dp" />
@@ -182,7 +183,7 @@
                         android:layout_width = "100dp"
                         android:layout_height = "wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="#ff2073ff"
+                        android:textColor="#FF47C83C"
                         android:text = "Dirección: "
                         android:id="@+id/lbl_direccion_usuario"
                         android:textSize="12dp" />
@@ -208,7 +209,7 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="#ff2073ff"
+                        android:textColor="#FF47C83C"
                         android:text="Provincia"
                         android:id="@+id/textView5"
                         android:textSize="12dp" />
@@ -235,7 +236,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="#ff2073ff"
+                        android:textColor="#FF47C83C"
                         android:text="Descripción de sus habilidades"
                         android:id="@+id/textView2"
                         android:textSize="12dp" />
@@ -269,18 +270,20 @@
                         android:layout_height="wrap_content"
                         android:text="Confirmar"
                         android:id="@+id/btnConfirmar_C"
-                        android:background="@drawable/botones_base"
+                        android:background="@drawable/botones_base_verde"
                         android:textColor="@drawable/botones_color_texto"
-                        android:textSize="16dp" />
+                        android:textSize="16dp"
+                        android:layout_marginRight="10dp" />
                     <Button
                         style="@style/Base.Theme.AppCompat.Light.DarkActionBar"
                         android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:text="Rechazar"
                         android:id="@+id/btnRechazar_C"
-                        android:background="@drawable/botones_base"
+                        android:background="@drawable/botones_base_verde"
                         android:textColor="@drawable/botones_color_texto"
-                        android:textSize="16dp" />
+                        android:textSize="16dp"
+                        android:layout_marginLeft="10dp" />
 
 
                 </LinearLayout>

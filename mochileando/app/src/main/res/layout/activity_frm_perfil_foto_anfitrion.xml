@@ -11,8 +11,8 @@
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="200dp"
-            android:layout_height="150dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:id="@+id/imgFotoHecha_AF"
             android:gravity="center"
             android:layout_gravity="center_horizontal"
@@ -24,20 +24,21 @@
             android:layout_height="wrap_content"
             android:text="Guardar Foto"
             android:id="@+id/btnSubirFoto_AF"
-            android:background="@drawable/botones_base"
+            android:background="@drawable/botones_base_verde"
             android:textColor="@drawable/botones_color_texto"
             android:textSize="16dp"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Hacer Foto"
             android:id="@+id/btnHacerFoto_AF"
-            android:background="@drawable/botones_base"
+            android:background="@drawable/botones_base_verde"
             android:textColor="@drawable/botones_color_texto"
             android:textSize="16dp"
             style="@style/Base.Widget.AppCompat.ActionButton.Overflow"
-            android:layout_marginTop="15dp" />
+            android:layout_marginTop="10dp" />
 
     </LinearLayout>
 

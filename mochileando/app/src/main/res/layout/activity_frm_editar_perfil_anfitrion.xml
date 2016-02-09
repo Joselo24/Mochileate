@@ -1,16 +1,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:layout_height="match_parent"
     tools:context="ben.dm.mochileando.frmEditarPerfilAnfitrion"
-    android:id="@+id/lyoEditar_Anf">
+    android:id="@+id/lyoEditar_Anf"
+    android:paddingLeft="15dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingRight="15dp">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -18,7 +19,7 @@
 
         <ScrollView
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:id="@+id/scrollView"
             android:layout_weight="0.08">
             <LinearLayout
@@ -37,14 +38,14 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="#ff2073ff"
+                        android:textColor="#FF47C83C"
                         android:text="Nombre:"
                         android:id="@+id/textView7" />
 
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="phone"
+                        android:inputType="text"
                         android:ems="10"
                         android:id="@+id/txtNombreV_Anf"
                         android:layout_weight="1"
@@ -63,18 +64,18 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="#ff2073ff"
+                        android:textColor="#FF47C83C"
                         android:text="Fecha Nac:"
                         android:id="@+id/textView12" />
 
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="phone"
                         android:ems="10"
                         android:id="@+id/txtFechaNV_Anf"
                         android:layout_weight="1"
-                        android:hint="0999999999" />
+                        android:hint="0999999999"
+                        android:inputType="date" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -87,7 +88,7 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="#ff2073ff"
+                        android:textColor="#FF47C83C"
                         android:text="Sexo:"
                         android:id="@+id/textView" />
 
@@ -108,7 +109,7 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="#ff2073ff"
+                        android:textColor="#FF47C83C"
                         android:text="Teléfono:"
                         android:id="@+id/textView6" />
 
@@ -132,18 +133,18 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="#ff2073ff"
+                        android:textColor="#FF47C83C"
                         android:text="Correo:"
                         android:id="@+id/textView8" />
 
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="phone"
                         android:ems="10"
                         android:id="@+id/txtCorreoV_Anf"
                         android:layout_weight="1"
-                        android:hint="0999999999" />
+                        android:hint="0999999999"
+                        android:inputType="textEmailAddress" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -156,14 +157,14 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="#ff2073ff"
+                        android:textColor="#FF47C83C"
                         android:text="Dirección:"
                         android:id="@+id/textView9" />
 
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="phone"
+                        android:inputType="textLongMessage"
                         android:ems="10"
                         android:id="@+id/txtDireccionV_Anf"
                         android:layout_weight="1"
@@ -180,7 +181,7 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="#ff2073ff"
+                        android:textColor="#FF47C83C"
                         android:text="Ciudad:"
                         android:id="@+id/textView10" />
 
@@ -200,7 +201,7 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="#ff2073ff"
+                        android:textColor="#FF47C83C"
                         android:text="Estado:"
                         android:id="@+id/textView140" />
 
@@ -221,18 +222,18 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="#ff2073ff"
+                        android:textColor="#FF47C83C"
                         android:text="Propuesta:"
                         android:id="@+id/textView11" />
 
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="phone"
                         android:ems="10"
                         android:id="@+id/txtPropuestaV_Anf"
                         android:layout_weight="1"
-                        android:hint="0999999999" />
+                        android:inputType="textMultiLine"
+                        android:hint="9999999999999999999999999999999999999990909" />
                 </LinearLayout>
                 <LinearLayout
                     android:orientation="horizontal"
@@ -244,18 +245,18 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="#ff2073ff"
+                        android:textColor="#FF47C83C"
                         android:text="Requiero:"
                         android:id="@+id/textView111" />
 
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="phone"
+                        android:inputType="textMultiLine"
                         android:ems="10"
                         android:id="@+id/txtRequerimiento_Anf"
                         android:layout_weight="1"
-                        android:hint="0999999999" />
+                        android:hint="099999999988888888888887777777777" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -263,7 +264,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:gravity="center"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="5dp">
 
                     <Button
                         android:layout_width="wrap_content"
@@ -271,10 +272,9 @@
                         android:layout_gravity="center"
                         android:text="Actualizar"
                         android:id="@+id/btnActualizarV_Anf"
-                        android:background="@drawable/botones_base"
+                        android:background="@drawable/botones_base_verde"
                         android:textColor="@drawable/botones_color_texto"
-                        style="@style/Base.Theme.AppCompat.Light.DarkActionBar"
-                        android:layout_marginTop="10dp" />
+                        style="@style/Base.Theme.AppCompat.Light.DarkActionBar" />
 
                 </LinearLayout>
 

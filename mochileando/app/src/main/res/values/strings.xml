@@ -18,4 +18,5 @@
     <string name="title_activity_frm_editar_perfil">frmEditarPerfil</string>
     <string name="title_activity_frm_editar_perfil_anfitrion">frmEditarPerfilAnfitrion</string>
     <string name="title_activity_frm_perfil_foto_anfitrion">frmPerfilFotoAnfitrion</string>
+    <string name="title_activity_frm_activar_sesion">frmActivarSesion</string>
 </resources>

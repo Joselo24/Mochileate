@@ -1,16 +1,16 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:layout_height="match_parent" android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
     tools:context="ben.dm.mochileando.frmEditarPerfil"
     android:id="@+id/lyoEditar">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -44,7 +44,7 @@
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="phone"
+                        android:inputType="text"
                         android:ems="10"
                         android:id="@+id/txtNombreV"
                         android:layout_weight="1"
@@ -70,11 +70,11 @@
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="phone"
                         android:ems="10"
                         android:id="@+id/txtFechaNV"
                         android:layout_weight="1"
-                        android:hint="0999999999" />
+                        android:hint="0999999999"
+                        android:inputType="date" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -139,7 +139,7 @@
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="phone"
+                        android:inputType="textEmailAddress"
                         android:ems="10"
                         android:id="@+id/txtCorreoV"
                         android:layout_weight="1"
@@ -163,11 +163,11 @@
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="phone"
                         android:ems="10"
                         android:id="@+id/txtDireccionV"
                         android:layout_weight="1"
-                        android:hint="0999999999" />
+                        android:hint="0999999999"
+                        android:inputType="textLongMessage" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -208,11 +208,11 @@
                     <EditText
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:inputType="phone"
                         android:ems="10"
                         android:id="@+id/txtHabilidadV"
                         android:layout_weight="1"
-                        android:hint="0999999999" />
+                        android:hint="09999999999999999999999999999999999998887654321tfdxxgfchjgvhvuyhgvjhbjnb"
+                        android:inputType="textMultiLine" />
                 </LinearLayout>
 
                 <LinearLayout

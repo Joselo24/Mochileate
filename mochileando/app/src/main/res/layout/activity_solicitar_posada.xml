@@ -24,7 +24,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Buscar"
-            android:id="@+id/btnBuscar" />
+            android:id="@+id/btnBuscar"
+            style="@style/Base.Theme.AppCompat.Light.DarkActionBar"
+            android:background="@drawable/botones_base"
+            android:textColor="@drawable/botones_color_texto"
+            android:textSize="16dp" />
 
     </LinearLayout>
 

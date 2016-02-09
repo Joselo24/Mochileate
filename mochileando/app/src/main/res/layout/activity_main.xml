@@ -10,7 +10,7 @@
         android:id="@+id/imageView"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-         />
+        android:background="@drawable/logo_v_200px" />
 
     <ProgressBar
         style="?android:attr/progressBarStyleHorizontal"
