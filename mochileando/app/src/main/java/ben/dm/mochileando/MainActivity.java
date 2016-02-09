@@ -67,7 +67,7 @@ public class MainActivity   extends Activity {
 
                 } else { //No existe ningun registro
                     Log.d("zzz", "No entro main");
-                    Intent i = new Intent(MainActivity.this, frmIniciarSesion.class);
+                    Intent i = new Intent(MainActivity.this, frmActivarSesion.class);
                     startActivity(i);
                     finish();
                 }
