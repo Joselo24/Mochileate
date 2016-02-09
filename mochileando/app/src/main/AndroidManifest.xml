@@ -2,6 +2,30 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ben.dm.mochileando" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- ........................................................................................... -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="ben.dm.mochileando.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="ben.dm.mochileando.permission.C2D_MESSAGE" />
+
+    <!-- ........................................................................................... -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,6 +39,46 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".frmIniciarSesion"
+            android:label="@string/title_activity_frm_iniciar_sesion" >
+        </activity>
+        <activity
+            android:name=".frmServicios"
+            android:label="@string/title_activity_frm_servicios" >
+        </activity>
+        <activity
+            android:name=".frmRegistrate"
+            android:label="@string/title_activity_frm_registrate" >
+        </activity>
+        <activity
+            android:name=".SolicitarPosada"
+            android:label="@string/title_activity_solicitar_posada" >
+        </activity>
+        <activity
+            android:name=".DetallesPosada"
+            android:label="@string/title_activity_detalles_posada" >
+        </activity>
+        <activity
+            android:name=".frmServicioAnfitrion"
+            android:label="@string/title_activity_frm_servicio_anfitrion" >
+        </activity>
+        <activity
+            android:name=".Adapter_Viajes_Act"
+            android:label="@string/title_activity_adapter__viajes_" >
+        </activity>
+        <activity
+            android:name=".frmTipoSesion"
+            android:label="@string/title_activity_frm_tipo_sesion" >
+        </activity>
+        <activity
+            android:name=".frmSolicitarViaje_1"
+            android:label="@string/title_activity_frm_solicitar_viaje_1" >
+        </activity>
+        <activity
+            android:name=".frmSolicitarViaje_2"
+            android:label="@string/title_activity_frm_solicitar_viaje_2" >
         </activity>
     </application>
 

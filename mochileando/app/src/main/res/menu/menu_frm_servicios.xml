@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context="ben.dm.mochileando.frmServicios">
+    <item android:id="@+id/menCambiar"
+        android:title="cambiar Sesión"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/menCerrarSesion"
+        android:title="Cerrar Sesión"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+</menu>

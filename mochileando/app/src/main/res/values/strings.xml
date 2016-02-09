@@ -3,4 +3,14 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_frm_iniciar_sesion">frmIniciarSesion</string>
+    <string name="title_activity_frm_servicios">frmServicios</string>
+    <string name="title_activity_frm_registrate">frmRegistrate</string>
+    <string name="title_activity_solicitar_posada">SolicitarPosada</string>
+    <string name="title_activity_detalles_posada">DetallesPosada</string>
+    <string name="title_activity_frm_servicio_anfitrion">frmServicioAnfitrion</string>
+    <string name="title_activity_adapter__viajes_">Adapter_Viajes_Act</string>
+    <string name="title_activity_frm_tipo_sesion">frmTipoSesion</string>
+    <string name="title_activity_frm_solicitar_viaje_1">frmSolicitarViaje_1</string>
+    <string name="title_activity_frm_solicitar_viaje_2">frmSolicitarViaje_2</string>
 </resources>
