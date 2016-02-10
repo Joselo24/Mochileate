@@ -80,7 +80,7 @@
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:layout_gravity="center_horizontal" >
 
                     <TextView
@@ -92,8 +92,8 @@
                         android:id="@+id/textView" />
 
                     <Spinner
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
                         android:id="@+id/spnSexoV" />
 
                 </LinearLayout>
@@ -173,7 +173,7 @@
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="49dp"
                     android:layout_gravity="center_horizontal" >
 
                     <TextView
@@ -185,8 +185,8 @@
                         android:id="@+id/textView10" />
 
                     <Spinner
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
                         android:id="@+id/spnCiudadV" />
 
                 </LinearLayout>
@@ -211,7 +211,6 @@
                         android:ems="10"
                         android:id="@+id/txtHabilidadV"
                         android:layout_weight="1"
-                        android:hint="09999999999999999999999999999999999998887654321tfdxxgfchjgvhvuyhgvjhbjnb"
                         android:inputType="textMultiLine" />
                 </LinearLayout>
 

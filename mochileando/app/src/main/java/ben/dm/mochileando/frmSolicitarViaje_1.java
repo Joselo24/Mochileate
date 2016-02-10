@@ -10,8 +10,6 @@ import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -58,7 +56,7 @@ public class frmSolicitarViaje_1 extends ActionBarActivity {
     private String[] array_CodDisponible;
 
     ArrayList<HashMap<String, String>> hasDisponible;
-    private ArrayList adapterCiudades;
+    private ArrayList listProvincias;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,19 +90,49 @@ public class frmSolicitarViaje_1 extends ActionBarActivity {
 
         lstDisponibles =(ListView)findViewById(R.id.lstDisponibles);
         spnCiudad=(Spinner)findViewById(R.id.spnCiudad);
-        adapterCiudades = new ArrayList<String>();
-        adapterCiudades.add("Guayas");
-        adapterCiudades.add("Cuenca");
-        adapterCiudades.add("Manabi");
-        adapterCiudades.add("Montañita");
-        adapterCiudades.add("Salinas");
-        adapterCiudades.add("Puerto Lopez");
-        adapterCiudades.add("Villamil");
-        adapterCiudades.add("Olon");
-        adapterCiudades.add("Ballenita");
-        adapterCiudades.add("Esmeraldas");
 
-        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, adapterCiudades);
+        listProvincias = new ArrayList<String>();
+        listProvincias.add("Guayaquil");
+        listProvincias.add("Salinas");
+        listProvincias.add("Puerto Lopez");
+        listProvincias.add("Villamil");
+        listProvincias.add("Olon");
+        listProvincias.add("Ballenita");
+        listProvincias.add("Esmeraldas");
+
+        listProvincias.add("Machalilla");
+        listProvincias.add("Manta");
+        listProvincias.add("Santa Rosa");
+        listProvincias.add("Jipijapa");
+        listProvincias.add("Puerto Cayo");
+        listProvincias.add("Bahía de Caraquez");
+        listProvincias.add("Cuenca");
+
+        listProvincias.add("Posorja");
+        listProvincias.add("San Vicente");
+        listProvincias.add("Pedernales");
+        listProvincias.add("Cojimies");
+        listProvincias.add("Canoa");
+        listProvincias.add("Crucita");
+        listProvincias.add("San José");
+
+        listProvincias.add("Las Tunas");
+        listProvincias.add("Ayampe");
+        listProvincias.add("Santa Elena");
+        listProvincias.add("Ayangue");
+        listProvincias.add("Salango");
+        listProvincias.add("San Pablo");
+        listProvincias.add("Punta Centinela");
+
+        listProvincias.add("Capaes");
+        listProvincias.add("Loja");
+        listProvincias.add("Libertad");
+        listProvincias.add("Punta Carnero");
+        listProvincias.add("Engabao");
+        listProvincias.add("San Pablo");
+        listProvincias.add("galapagos");
+
+        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listProvincias);
         adaptador.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spnCiudad.setAdapter(adaptador);
         //array_CodDisponible =new String[25];

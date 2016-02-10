@@ -69,13 +69,45 @@ public class frmRegistrate extends ActionBarActivity {
         loading=(RelativeLayout)findViewById(R.id.registratelayout);
 
         listProvincias = new ArrayList<String>();
-        listProvincias.add("Montañita");
+        listProvincias.add("Guayaquil");
         listProvincias.add("Salinas");
         listProvincias.add("Puerto Lopez");
         listProvincias.add("Villamil");
         listProvincias.add("Olon");
         listProvincias.add("Ballenita");
         listProvincias.add("Esmeraldas");
+
+        listProvincias.add("Machalilla");
+        listProvincias.add("Manta");
+        listProvincias.add("Santa Rosa");
+        listProvincias.add("Jipijapa");
+        listProvincias.add("Puerto Cayo");
+        listProvincias.add("Bahía de Caraquez");
+        listProvincias.add("Cuenca");
+
+        listProvincias.add("Posorja");
+        listProvincias.add("San Vicente");
+        listProvincias.add("Pedernales");
+        listProvincias.add("Cojimies");
+        listProvincias.add("Canoa");
+        listProvincias.add("Crucita");
+        listProvincias.add("San José");
+
+        listProvincias.add("Las Tunas");
+        listProvincias.add("Ayampe");
+        listProvincias.add("Santa Elena");
+        listProvincias.add("Ayangue");
+        listProvincias.add("Salango");
+        listProvincias.add("San Pablo");
+        listProvincias.add("Punta Centinela");
+
+        listProvincias.add("Capaes");
+        listProvincias.add("Loja");
+        listProvincias.add("Libertad");
+        listProvincias.add("Punta Carnero");
+        listProvincias.add("Engabao");
+        listProvincias.add("San Pablo");
+        listProvincias.add("galapagos");
 
         ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, listProvincias);
         adaptador.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

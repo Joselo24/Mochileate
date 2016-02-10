@@ -7,25 +7,36 @@
     tools:context="ben.dm.mochileando.frmSolicitarViaje_1"
     android:id="@+id/lyoSol1">
 
-    <Spinner
-        android:layout_width="250dp"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/spnCiudad"
-        android:layout_alignParentTop="true" />
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout6">
+
+        <Spinner
+            android:layout_width="250dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/spnCiudad"
+            android:layout_alignParentTop="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buscar"
+            android:id="@+id/btnBuscarPosada"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/spnCiudad"
+            android:layout_toEndOf="@+id/spnCiudad"
+            android:background="@drawable/bt_base" />
+    </LinearLayout>
 
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
         android:id="@+id/lstDisponibles"
-        android:layout_below="@+id/spnCiudad"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/linearLayout6"
+        android:layout_marginTop="10dp" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Buscar"
-        android:id="@+id/btnBuscarPosada"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/spnCiudad"
-        android:layout_toEndOf="@+id/spnCiudad" />
 </RelativeLayout>
