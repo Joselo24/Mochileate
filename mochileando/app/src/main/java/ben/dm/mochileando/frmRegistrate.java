@@ -48,13 +48,7 @@ public class frmRegistrate extends ActionBarActivity {
 
     private ArrayList listProvincias;
 
-    @Override//Para que el botan atras funcione
-    public boolean onOptionsItemSelected(MenuItem item){
-        Intent myIntent = new Intent(getApplicationContext(), frmIniciarSesion.class);
-        startActivityForResult(myIntent, 0);
-        return true;
 
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

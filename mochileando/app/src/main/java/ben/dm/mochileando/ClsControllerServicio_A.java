@@ -59,6 +59,7 @@ public class ClsControllerServicio_A {
         ArrayList<HashMap<String, String>> has_x_Hospedar, hasHospedadas;
         private static String url= "http://www.studioqatro.com/mochileando/AllInfo_A.php";
         private static String url2= "http://www.studioqatro.com/mochileando/AllPerfil_A.php";
+        private static String url3= "http://www.studioqatro.com/mochileando/AllPerfil_AConfirmar.php";
         private clsConexionRemota oConexion = new clsConexionRemota();
         private Bitmap loadedImage;
         private String imageHttpAddress = "http://www.studioqatro.com/mochileando/foto/";
@@ -82,10 +83,16 @@ public class ClsControllerServicio_A {
         ClsControllerServicio_A(){    }
         ClsControllerServicio_A(List params, boolean key){
 
+            String llave="";
+            if(key==true){
+                llave=url2;
+            }else{
+                llave=url3;
+            }
 
         try {
 
-            JSONObject jsonPerfil = oConexion.makeHttpRequest2(url2, "POST", params);
+            JSONObject jsonPerfil = oConexion.makeHttpRequest2(llave, "POST", params);
             Log.d("perfil ", jsonPerfil.toString());
             int success = jsonPerfil.getInt(TAG_SUCCESS_COLUMNA);
             switch (success){

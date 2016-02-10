@@ -165,7 +165,7 @@ public class frmConfSolAnfitrion extends ActionBarActivity {
                                         break;
 
                                     case "1":
-                                        Toast.makeText(getApplicationContext(), "La cita se anulo con exito.", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getApplicationContext(), "La solicitud se rechazo con exito.", Toast.LENGTH_SHORT).show();
                                         finish();
                                         break;
                                     case "2":
@@ -225,7 +225,7 @@ public class frmConfSolAnfitrion extends ActionBarActivity {
                                         break;
 
                                     case "1":
-                                        Toast.makeText(getApplicationContext(), "La cita se anulo con exito.", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getApplicationContext(), "La solicitud se confirmo con exito.", Toast.LENGTH_SHORT).show();
                                         finish();
                                         break;
                                     case "2":
@@ -305,7 +305,7 @@ public class frmConfSolAnfitrion extends ActionBarActivity {
             params.add(new BasicNameValuePair("codigo", codigoViaje));
             //-----------------------------------------------------------------
             try {
-                oPerfil = new ClsControllerServicio_A(params,true);
+                oPerfil = new ClsControllerServicio_A(params,false);
 
 
 
