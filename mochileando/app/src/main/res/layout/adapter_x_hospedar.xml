@@ -22,16 +22,14 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#FF47C83C"
                 android:text = "Ciudad"
-                android:id="@+id/lbl_Pro"
-                android:textSize="12dp" />
+                android:id="@+id/lbl_Pro" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Medium Text"
-                android:id="@+id/txtCiudadxViajes_H"
-                android:textSize="12dp" />
+                android:id="@+id/txtCiudadxViajes_H" />
 
 
         </LinearLayout>
@@ -49,16 +47,14 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#FF47C83C"
                 android:text = "Fecha"
-                android:id="@+id/lbl_Fecha"
-                android:textSize="12dp" />
+                android:id="@+id/lbl_Fecha" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Medium Text"
-                android:id="@+id/txtFechaxViajes_H"
-                android:textSize="12dp" />
+                android:id="@+id/txtFechaxViajes_H" />
 
 
         </LinearLayout>
@@ -76,16 +72,14 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#FF47C83C"
                 android:text = "Visitante"
-                android:id="@+id/lbl_Anfitrion"
-                android:textSize="12dp" />
+                android:id="@+id/lbl_Anfitrion" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Medium Text"
-                android:id="@+id/txtAnfitrionxViajar_H"
-                android:textSize="12dp" />
+                android:id="@+id/txtAnfitrionxViajar_H" />
 
 
         </LinearLayout>
@@ -103,16 +97,14 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#FF47C83C"
                 android:text = "Estado"
-                android:id="@+id/Estado"
-                android:textSize="12dp" />
+                android:id="@+id/Estado" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Medium Text"
-                android:id="@+id/txtEstadoxViajes_H"
-                android:textSize="12dp" />
+                android:id="@+id/txtEstadoxViajes_H" />
 
 
         </LinearLayout>

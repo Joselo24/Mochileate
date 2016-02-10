@@ -65,7 +65,7 @@
                         android:text="Medium Text"
                         android:id="@+id/txtNombres_C"
                         android:layout_gravity="center_horizontal"
-                        android:textSize="14dp" />
+                        />
 
                 </LinearLayout>
 
@@ -82,8 +82,7 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#FF47C83C"
                         android:text = "Fecha Nac"
-                        android:id="@+id/lbl_Pro"
-                        android:textSize="12dp" />
+                        android:id="@+id/lbl_Pro" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -91,7 +90,7 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Medium Text"
                         android:id="@+id/txtNacimiento_C"
-                        android:textSize="12dp" />
+                        />
 
                 </LinearLayout>
 
@@ -109,7 +108,7 @@
                         android:textColor="#FF47C83C"
                         android:text = "Sexo"
                         android:id="@+id/lbl_Sexo"
-                        android:textSize="12dp" />
+                         />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -117,7 +116,7 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Medium Text"
                         android:id="@+id/txtSexo_C"
-                        android:textSize="12dp" />
+                        />
 
                 </LinearLayout>
 
@@ -135,7 +134,7 @@
                         android:textColor="#FF47C83C"
                         android:text = "Teléfono:"
                         android:id="@+id/lbl_telefono_usuario"
-                        android:textSize="12dp" />
+                        />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -143,7 +142,7 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Medium Text"
                         android:id="@+id/txtCelular_C"
-                        android:textSize="12dp" />
+                       />
 
                 </LinearLayout>
 
@@ -161,7 +160,7 @@
                         android:textColor="#FF47C83C"
                         android:text="Correo:"
                         android:id="@+id/textView20"
-                        android:textSize="12dp" />
+                        />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -169,7 +168,7 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Medium Text"
                         android:id="@+id/txtCorreo_C"
-                        android:textSize="12dp" />
+                        />
                 </LinearLayout>
 
                 <LinearLayout
@@ -186,7 +185,7 @@
                         android:textColor="#FF47C83C"
                         android:text = "Dirección: "
                         android:id="@+id/lbl_direccion_usuario"
-                        android:textSize="12dp" />
+                         />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -194,7 +193,7 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Medium Text"
                         android:id="@+id/txtDireccion_C"
-                        android:textSize="12dp" />
+                         />
 
                 </LinearLayout>
 
@@ -212,7 +211,7 @@
                         android:textColor="#FF47C83C"
                         android:text="Provincia"
                         android:id="@+id/textView5"
-                        android:textSize="12dp" />
+                        />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -220,7 +219,7 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Medium Text"
                         android:id="@+id/txtProvincia_C"
-                        android:textSize="12dp" />
+                        />
                 </LinearLayout>
 
 
@@ -230,7 +229,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="10dp" >
+                    android:layout_marginTop="14dp" >
 
                     <TextView
                         android:layout_width="fill_parent"
@@ -239,7 +238,7 @@
                         android:textColor="#FF47C83C"
                         android:text="Descripción de sus habilidades"
                         android:id="@+id/textView2"
-                        android:textSize="12dp" />
+                        />
 
                     <TextView
                         android:layout_width="fill_parent"
@@ -247,7 +246,7 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Medium Text"
                         android:id="@+id/txtHabilidades_C"
-                        android:textSize="12dp" />
+                       />
                 </LinearLayout>
 
 

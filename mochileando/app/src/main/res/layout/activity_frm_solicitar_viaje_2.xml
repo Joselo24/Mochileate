@@ -63,7 +63,6 @@
                         android:text="Medium Text"
                         android:id="@+id/txtNombresSol_2"
                         android:layout_gravity="center_horizontal"
-                        android:textSize="14dp"
                         android:layout_marginTop="5dp" />
 
                 </LinearLayout>
@@ -81,16 +80,14 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#ff2073ff"
                         android:text = "Fecha Nac"
-                        android:id="@+id/lbl_Pro"
-                        android:textSize="12dp" />
+                        android:id="@+id/lbl_Pro" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Medium Text"
-                        android:id="@+id/txtNacimientoSol_2"
-                        android:textSize="12dp" />
+                        android:id="@+id/txtNacimientoSol_2" />
 
                 </LinearLayout>
 
@@ -107,16 +104,14 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#ff2073ff"
                         android:text = "Sexo"
-                        android:id="@+id/lbl_Sexo"
-                        android:textSize="12dp" />
+                        android:id="@+id/lbl_Sexo" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Medium Text"
-                        android:id="@+id/txtSexoSol_2"
-                        android:textSize="12dp" />
+                        android:id="@+id/txtSexoSol_2" />
 
                 </LinearLayout>
 
@@ -133,16 +128,14 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#ff2073ff"
                         android:text = "Teléfono:"
-                        android:id="@+id/lbl_telefono_usuario"
-                        android:textSize="12dp" />
+                        android:id="@+id/lbl_telefono_usuario" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Medium Text"
-                        android:id="@+id/txtCelularSol_2"
-                        android:textSize="12dp" />
+                        android:id="@+id/txtCelularSol_2" />
 
                 </LinearLayout>
 
@@ -159,16 +152,14 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#ff2073ff"
                         android:text="Correo:"
-                        android:id="@+id/textView20"
-                        android:textSize="12dp" />
+                        android:id="@+id/textView20" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Medium Text"
-                        android:id="@+id/txtCorreoSol_2"
-                        android:textSize="12dp" />
+                        android:id="@+id/txtCorreoSol_2" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -184,16 +175,14 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#ff2073ff"
                         android:text = "Dirección: "
-                        android:id="@+id/lbl_direccion_usuario"
-                        android:textSize="12dp" />
+                        android:id="@+id/lbl_direccion_usuario" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Medium Text"
-                        android:id="@+id/txtDireccionSol_2"
-                        android:textSize="12dp" />
+                        android:id="@+id/txtDireccionSol_2" />
 
                 </LinearLayout>
 
@@ -210,16 +199,14 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#ff2073ff"
                         android:text="Provincia"
-                        android:id="@+id/textView5"
-                        android:textSize="12dp" />
+                        android:id="@+id/textView5" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Medium Text"
-                        android:id="@+id/txtProvinciaSol_2"
-                        android:textSize="12dp" />
+                        android:id="@+id/txtProvinciaSol_2" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -235,16 +222,14 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#ff2073ff"
                         android:text="Estado"
-                        android:id="@+id/textView4"
-                        android:textSize="12dp" />
+                        android:id="@+id/textView4" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Medium Text"
-                        android:id="@+id/txtEstadoSol_2"
-                        android:textSize="12dp" />
+                        android:id="@+id/txtEstadoSol_2" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -260,16 +245,14 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#ff2073ff"
                         android:text="Descripción de su propuesta"
-                        android:id="@+id/textView2"
-                        android:textSize="12dp" />
+                        android:id="@+id/textView2" />
 
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="46dp"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Medium Text"
-                        android:id="@+id/txtPropuestaSol_2"
-                        android:textSize="12dp" />
+                        android:id="@+id/txtPropuestaSol_2" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -285,16 +268,14 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="#ff2073ff"
                         android:text="Descripción de Requerimientos"
-                        android:id="@+id/txt1212"
-                        android:textSize="12dp" />
+                        android:id="@+id/txt1212" />
 
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="46dp"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="Medium Text"
-                        android:id="@+id/txtRequerimeintoSol_2"
-                        android:textSize="12dp" />
+                        android:id="@+id/txtRequerimeintoSol_2" />
                 </LinearLayout>
 
                 <LinearLayout

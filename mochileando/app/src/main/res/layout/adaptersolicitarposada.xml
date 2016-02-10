@@ -22,16 +22,14 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#ff2073ff"
                 android:text = "Ciudad"
-                android:id="@+id/lbl_Pro"
-                android:textSize="12dp" />
+                android:id="@+id/lbl_Pro" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Medium Text"
-                android:id="@+id/txtCiudadSp"
-                android:textSize="12dp" />
+                android:id="@+id/txtCiudadSp" />
 
 
         </LinearLayout>
@@ -49,16 +47,14 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#ff2073ff"
                 android:text = "Anfitrión"
-                android:id="@+id/lbl_Anfitrion"
-                android:textSize="12dp" />
+                android:id="@+id/lbl_Anfitrion" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Medium Text"
-                android:id="@+id/txtAnfitrionSp"
-                android:textSize="12dp" />
+                android:id="@+id/txtAnfitrionSp" />
 
 
         </LinearLayout>
@@ -76,16 +72,14 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#ff2073ff"
                 android:text="Dirección"
-                android:id="@+id/txtPrueba"
-                android:textSize="12dp" />
+                android:id="@+id/txtPrueba" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Medium Text"
-                android:id="@+id/txtDireccionSp"
-                android:textSize="12dp" />
+                android:id="@+id/txtDireccionSp" />
         </LinearLayout>
 
 

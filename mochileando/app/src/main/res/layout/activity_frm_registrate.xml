@@ -31,7 +31,6 @@
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
                     android:ems="10"
-                    android:textSize="16dp"
                     android:id="@+id/txtUsuario"
                     android:layout_weight="1"
                     android:hint="Usuario"/>
@@ -41,7 +40,6 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
                     android:ems="10"
-                    android:textSize="16dp"
                     android:id="@+id/txtContraseña"
                     android:layout_weight="1"
                     android:hint="Contraseña"/>
@@ -53,8 +51,7 @@
                     android:ems="10"
                     android:id="@+id/txtConfirmar"
                     android:layout_weight="1"
-                    android:hint="Confirmar contraseña"
-                    android:textSize="16dp"/>
+                    android:hint="Confirmar contraseña" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -63,8 +60,7 @@
                     android:ems="10"
                     android:id="@+id/txtName"
                     android:layout_weight="1"
-                    android:hint=" Nombres y Apellidos"
-                    android:textSize="16dp"/>
+                    android:hint=" Nombres y Apellidos" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -73,8 +69,7 @@
                     android:ems="10"
                     android:id="@+id/txtTelefono"
                     android:layout_weight="1"
-                    android:hint="Número de Teléfono"
-                    android:textSize="16dp"/>
+                    android:hint="Número de Teléfono" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -83,8 +78,7 @@
                     android:ems="10"
                     android:id="@+id/txtEmail"
                     android:layout_weight="1"
-                    android:hint="micorreo@dominio.com"
-                    android:textSize="16dp"/>
+                    android:hint="micorreo@dominio.com" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -93,8 +87,7 @@
                     android:ems="10"
                     android:id="@+id/txtDireccion"
                     android:layout_weight="1"
-                    android:hint="Dirección de Domicilio"
-                    android:textSize="16dp"/>
+                    android:hint="Dirección de Domicilio" />
 
                 <Spinner
                     android:layout_width="fill_parent"

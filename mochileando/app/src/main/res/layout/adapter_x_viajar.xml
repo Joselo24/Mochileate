@@ -26,16 +26,14 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#ff2073ff"
                 android:text = "Ciudad"
-                android:id="@+id/lbl_Pro"
-                android:textSize="12dp" />
+                android:id="@+id/lbl_Pro" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Medium Text"
-                android:id="@+id/txtCiudadxViajes"
-                android:textSize="12dp" />
+                android:id="@+id/txtCiudadxViajes" />
 
 
         </LinearLayout>
@@ -53,16 +51,14 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#ff2073ff"
                 android:text = "Fecha"
-                android:id="@+id/lbl_Fecha"
-                android:textSize="12dp" />
+                android:id="@+id/lbl_Fecha" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Medium Text"
-                android:id="@+id/txtFechaxViajes"
-                android:textSize="12dp" />
+                android:id="@+id/txtFechaxViajes" />
 
 
         </LinearLayout>
@@ -80,16 +76,14 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#ff2073ff"
                 android:text = "Anfitrión"
-                android:id="@+id/lbl_Anfitrion"
-                android:textSize="12dp" />
+                android:id="@+id/lbl_Anfitrion" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Medium Text"
-                android:id="@+id/txtAnfitrionxViajar"
-                android:textSize="12dp" />
+                android:id="@+id/txtAnfitrionxViajar" />
 
 
         </LinearLayout>
@@ -107,16 +101,14 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="#ff2073ff"
                 android:text = "Estado"
-                android:id="@+id/Estado"
-                android:textSize="12dp" />
+                android:id="@+id/Estado" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Medium Text"
-                android:id="@+id/txtEstadoxViajes"
-                android:textSize="12dp" />
+                android:id="@+id/txtEstadoxViajes" />
 
 
         </LinearLayout>

@@ -80,8 +80,7 @@
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:text="Medium Text"
                                         android:id="@+id/txtNombres"
-                                        android:layout_gravity="center_horizontal"
-                                        android:textSize="14dp" />
+                                        android:layout_gravity="center_horizontal" />
 
                                 </LinearLayout>
 
@@ -98,16 +97,14 @@
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:textColor="#ff2073ff"
                                         android:text = "Fecha Nac"
-                                        android:id="@+id/lbl_Pro"
-                                        android:textSize="12dp" />
+                                        android:id="@+id/lbl_Pro" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:text="Medium Text"
-                                        android:id="@+id/txtNacimiento"
-                                        android:textSize="12dp" />
+                                        android:id="@+id/txtNacimiento" />
 
                                 </LinearLayout>
 
@@ -124,16 +121,14 @@
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:textColor="#ff2073ff"
                                         android:text = "Sexo"
-                                        android:id="@+id/lbl_Sexo"
-                                        android:textSize="12dp" />
+                                        android:id="@+id/lbl_Sexo" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:text="Medium Text"
-                                        android:id="@+id/txtSexo"
-                                        android:textSize="12dp" />
+                                        android:id="@+id/txtSexo" />
 
                                 </LinearLayout>
 
@@ -150,16 +145,14 @@
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:textColor="#ff2073ff"
                                         android:text = "Teléfono:"
-                                        android:id="@+id/lbl_telefono_usuario"
-                                        android:textSize="12dp" />
+                                        android:id="@+id/lbl_telefono_usuario" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:text="Medium Text"
-                                        android:id="@+id/txtCelular"
-                                        android:textSize="12dp" />
+                                        android:id="@+id/txtCelular" />
 
                                 </LinearLayout>
 
@@ -176,16 +169,14 @@
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:textColor="#ff2073ff"
                                         android:text="Correo:"
-                                        android:id="@+id/textView20"
-                                        android:textSize="12dp" />
+                                        android:id="@+id/textView20" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:text="Medium Text"
-                                        android:id="@+id/txtCorreo"
-                                        android:textSize="12dp" />
+                                        android:id="@+id/txtCorreo" />
                                 </LinearLayout>
 
                                 <LinearLayout
@@ -201,16 +192,14 @@
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:textColor="#ff2073ff"
                                         android:text = "Dirección: "
-                                        android:id="@+id/lbl_direccion_usuario"
-                                        android:textSize="12dp" />
+                                        android:id="@+id/lbl_direccion_usuario" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:text="Medium Text"
-                                        android:id="@+id/txtDireccion"
-                                        android:textSize="12dp" />
+                                        android:id="@+id/txtDireccion" />
 
                                 </LinearLayout>
 
@@ -227,16 +216,14 @@
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:textColor="#ff2073ff"
                                         android:text="Provincia"
-                                        android:id="@+id/textView5"
-                                        android:textSize="12dp" />
+                                        android:id="@+id/textView5" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:text="Medium Text"
-                                        android:id="@+id/txtProvincia"
-                                        android:textSize="12dp" />
+                                        android:id="@+id/txtProvincia" />
                                 </LinearLayout>
                                 <LinearLayout
                                     android:orientation="vertical"
@@ -251,16 +238,14 @@
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:textColor="#ff2073ff"
                                         android:text="Describe tus habilidades"
-                                        android:id="@+id/textView50"
-                                        android:textSize="12dp" />
+                                        android:id="@+id/textView50" />
 
                                     <TextView
                                         android:layout_width="fill_parent"
                                         android:layout_height="59dp"
                                         android:textAppearance="?android:attr/textAppearanceMedium"
                                         android:text="Medium Text"
-                                        android:id="@+id/txthabilidades"
-                                        android:textSize="12dp" />
+                                        android:id="@+id/txthabilidades" />
                                 </LinearLayout>
 
                                 <LinearLayout
